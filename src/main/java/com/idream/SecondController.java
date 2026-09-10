@@ -12,6 +12,12 @@ public class SecondController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SecondController.class);
 
+    @GetMapping("/")
+    public String home() {
+    	LOGGER.info("Home endpoint accessed - serving welcome page");
+        return "<h1>Welcome from micro service B.</h1>";
+    }
+	
 	@PostMapping("/get-data")
 	public String getData() {
 		LOGGER.info("*----------- Second micro service calld -----------*");
