@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/second")
+//@RequestMapping("/second")
 public class SecondController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SecondController.class);
@@ -19,7 +19,7 @@ public class SecondController {
         return "<h1>Welcome from micro service B.</h1>";
     }
 	
-	@PostMapping("/get-data")
+	//@PostMapping("/get-data")
 	public String getData() {
 		LOGGER.info("*----------- Second micro service calld -----------*");
 		String resp = "Welcome from Second Micro Service";
